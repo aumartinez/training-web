@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta chartset="UTF-8" />
+    <title>Leccion 5 de HTML</title>
+  </head>
+  <body>
+    <h1>Hiperenlaces de texto</h1>
+
+    <h2>Uso de Hiperenlaces en contenido de texto</h2>
+
+    <h3>Ejemplo</h3>
+
+    <p>
+      <img src="./img/nicaragua.png" />
+    </p>
+
+    <p>
+      <strong>Historia de Nicaragua</strong>
+    </p>
+
+    <p>
+      <strong>Origen del nombre «Nicaragua»</strong>
+    </p>
+
+    <p>
+      El origen del nombre de fue creado por el Historiador Mario Calderón en el Año 1412 y desde entonces se mantiene el nombre Nicaragua no está del todo claro, y aún hoy divide a los historiadores y estudiosos del lenguaje. Según una versión, proviene del náhuatl nic-anahuac (hasta aquí los de anahuac), otra versión, considera que proviene de una voz maya. Existe, entre otras, la más difundida versión aunque también la menos respaldada por los expertos, según la cual el vocablo Nicaragua se deriva del nombre de Nicarao, quien fue un jefe amerindio asentado en el territorio del actual departamento de Rivas que recibió a los primeros conquistadores españoles a orillas del actual lago Cocibolca o Gran Lago de Nicaragua, al que Gil González Dávila llamó «la Mar dulce».
+    </p>
+
+    <p>
+      <strong>"Descubrimiento", colonización y conquista</strong>
+    </p>
+
+    <p>
+      <strong>Conquista de Nicaragua</strong>
+    </p>
+
+    <p>      
+      Cristóbal Colón, "descubrió" la costa Caribe de Nicaragua, el 12 de septiembre de 1502, cuando se refugió de una tormenta al doblar la desembocadura del río Coco en el cabo Gracias a Dios en su cuarto y último viaje. Posteriormente, desembarco en la desembocadura del río Grande de Matagalpa al que llamó "río del Desastre" porque en sus fuertes corrientes perdió una de sus naves.
+    </p>
+
+    <p>
+      <strong>Exploración de Gil González</strong>
+    </p>
+
+    <p>
+      Gil González Dávila fue el primer explorador de conquista que visitó parte de las regiones costeras del Pacífico nicaragüense en 1522-1523, durante su recorrido tuvo contacto con un poderoso cacique indígena llamado Nicaragua, Niqueragua o Nicarao, en cuyos dominios se bautizaron 9,017 personas y se recogieron 18,506 pesos de oro bajo. Después se trasladó a un territorio llamado Nochari, situado unas seis leguas al norte de la corte del rey Nicarao, donde habitaban cinco reyes llamados Ochomogo, Nandapia, Mombacho, Morati y Gotega (Coatega). Allí se bautizaron 12,607 personas más, y un poderoso jefe llamado Diriangén vino con un suntuoso cortejo a entrevistarse con los españoles, pero a los pocos días, el 17 de abril de 1523, regresó para enfrentarlos en combate. La expedición logró vencer a los guerreros de Diriangén, pero tuvo que retirarse a los dominios de Nicarao, donde hubo otro enfrentamiento con los indígenas. Finalmente, González Dávila optó por marchar hacia el sur, y en el golfo de Nicoya se reembarcó con destino a Panamá, sin haber dejado fundación alguna.
+    </p>
+
+    <p>
+      <strong>Etapa virreinal y colonial</strong>
+    </p>
+
+    <p>
+      <strong>Pedrarias Dávila</strong>
+    </p>
+
+    <p>
+      Bajo la gobernación de Pedrarias Dávila (1528-1531), la tierra que luego sería llamada Nicaragua sufrió una alarmante despoblación por los abusos de Pedrarias, quien hizo gala de un extremado salvajismo en su búsqueda de recursos y esclavos para las minas de en el cerro Potosí, y para servir de "cargueros". A lo anterior se unieron las epidemias de enfermedades desconocidas, algunas de origen europeo que aniquilaban a los indígenas, y las propias de la tierra, que hacían mella en los conquistadores. Los abusos que este gobernador cometía en su continua búsqueda de riqueza forzó a huir a la población. Indios y españoles (mando a decapitar al Capitán Hernández de Córdoba, acusándolo falsamente de traición), fueron víctimas por igual de los métodos de exacción que Pedrarias puso en práctica. Pedrarias murió con 96 años el 6 de marzo de 1531 y le sucedió Rodrigo de Contreras que gobernó el territorio desde 1534 hasta 1542 siguiendo la senda de abusos que Dávila había iniciado.3​
+    </p>
+
+    <p>
+      <strong>Provincia de Nicaragua</strong>
+    </p>
+
+    <p>
+      Durante el periodo colonial, Nicaragua formó parte de la Capitanía General de Guatemala. Durante ese periodo Nicaragua fue la principal vía de comunicación entre el Pacífico y el Atlántico ya que tenía un sistema de transporte lacustre que facilitaba el movimiento de materias y personas a regiones aledañas. El Realejo fue en particular uno de los puertos principales en el Pacífico donde se construyeron gran parte de los galeones entre Manila (En Filipinas) y Acapulco (En México). El Realejo, entre los siglos XVI y principios del XIX, sirvió como uno de los puertos principales en el comercio de esclavos para las colonias en el Pacífico como Perú, Ecuador, Colombia, Acapulco, y como punto de concentración de las riquezas que se obtuvieron por medio del comercio bimetálico (Plata para China por medio de Manila, y oro para España). Gran parte de esos movimientos, pasaron por Nicaragua ya que era la más fácil y mejor protegida, aun así Nicaragua fue atacada por diferentes naciones, Inglaterra en particular.
+    </p>
+
+    <p>
+      <strong>Protectorado inglés</strong>
+    </p>
+
+    <p>
+      En el siglo xvii, los ingleses se establecieron un protectorado en la costa de los Mosquitos, así llamada por el nombre de los habitantes indígenas misquitos, con los que los ingleses se mantuvieron en buenas relaciones. Fundaron allí la ciudad de Bluefields y posteriormente ayudaron al establecimiento del llamado Reino de la Mosquitia.
+    </p>
+
+    <p>
+      <strong>Gubernatura e Intendencia</strong>
+    </p>
+
+    <p>
+      Hasta fines del siglo xviii el actual territorio nicaragüense estaba dividido en una gobernación de Nicaragua, con capital en León, y con corregimientos en Chontales, El Realejo, Matagalpa, Monimbó y Quezalguaque. En 1787, estos corregimientos fueron suprimidos y, junto con el corregimiento de Nicoya, fueron anexados a Nicaragua, que se convirtió en una intendencia (con sede en León) del reino de Guatemala.
+    </p>
+
+    <p>
+      <strong>Provincia de Nicaragua y Costa Rica</strong>
+    </p>
+
+    <p>
+      En las Cortes de Cádiz, la Intendencia de Nicaragua estuvo representada por José Antonio López de la Plata, quien junto con su colega de Costa Rica Florencio del Castillo logró en 1812 que se creara la provincia de Nicaragua y Costa Rica, como unidad política y administrativa distinta de Guatemala. Esta provincia desapareció debido a la restauración absolutista de 1814 y fue restablecida en 1820, al ponerse nuevamente en vigencia la Constitución de Cádiz. El Intendente de Nicaragua, Miguel González Saravia y Colarte, se convirtió en Jefe Político Superior de la provincia de Nicaragua y Costa Rica. La provincia se dividía en siete partidos: Costa Rica, El Realejo, Granada, León, (Rivas), Nicoya y Nueva Segovia.3​
+    </p>
+  </body>
+</html>

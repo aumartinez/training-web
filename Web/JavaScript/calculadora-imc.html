@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="es">  
+  <head>
+    <meta charset="UTF-8">
+    <title>Calculadora de masa corporal</title>
+    
+    <style>
+      html {
+        margin: 0;
+        padding: 0;
+      }
+      
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .row {
+        display: flex;
+        column-gap: 30px;
+        flex-direction: column;
+      }
+
+      @media (min-width: 768px) {
+        .row {
+          flex-direction: row;
+        }
+      }
+
+      div[class^="col-"] {
+        padding: 0 15px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      @media (min-width: 768px) {
+        .col-100 {
+          width: 100%;
+        }
+
+        .col-50 {
+          width: 50%;
+        }
+      }      
+
+      .heading-title {
+        text-align: center;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .bg-light {
+        background-color: #ccc;
+      }
+
+      /** Estilos de formulario **/
+
+      form {
+        margin-bottom: 30px;
+      }
+
+      .form-label {
+        display: block;
+        margin-bottom: 15px;
+      }
+
+      .form-input {
+        display: block;
+        width: 100%;
+        border: 1px solid #555;
+        border-radius: 10px;
+        height: 35px;
+        margin-bottom: 15px;
+      }
+
+      .form-btn {
+        display: inline-block;
+        padding: 5px 20px;
+        border: 1px solid #555;
+        border-radius: 10px;
+        height: 35px;
+        margin-bottom: 15px;
+        cursor: pointer;
+      }
+    </style>
+
+    <script>
+
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-100">
+          <h1 class="heading-title">
+            Calculadora de Masa Corporal
+          </h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-50">
+          <h2 class="text-center">
+            Herramienta para calculo IMC
+          </h2>
+
+          <p>
+            Utiliza esta herramienta para calcular tu índice de Masaya corporal, solo agrega tu estatura y tu peso en kilogramos. Haz click en "Mostrar" y checa tu resultado.
+          </p>
+        </div>
+        <div class="col-50 bg-light">
+          <h2 class="text-center">
+            Calculadora
+          </h2>
+
+          <form>
+            <div class="form-group">
+              <label class="form-label">
+                Tu estatura (metros):
+              </label>
+              <input class="form-input" id="height" type="number">
+            </div>
+            <div class="form-group">
+              <label class="form-label">
+                Tu peso (kilos):
+              </label>
+              <input class="form-input" id="weight" type="number">
+            </div>
+            <div class="form-group text-center">
+              <button type="button" class="form-btn btn-center">
+                Mostrar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

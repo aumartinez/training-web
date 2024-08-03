@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formularios</title>
+  </head>
+  <body>
+    <h1>Esta es una practica de formularios en HTML</h1>
+    <hr />
+    <form action="" method="get">
+      <fieldset>
+        <legend>
+          Nombre
+        </legend>
+
+        <label>
+          Nombre:
+        </label><br>
+        <input type="text" name="nombre"><br>
+
+        <Apellido>
+          Apellido:
+        </Apellido><br>
+        <input type="text" name="apellidos"><br>
+      </fieldset>
+      
+      <fieldset>
+        <legend>
+          Genero          
+        </legend>
+
+        <label>
+          Masculino
+          <input type="radio" name="genero" value="M">
+        </label><br>
+
+        <label>
+          Femenino
+          <input type="radio" name="genero" value="F">
+        </label><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>
+          Ocupacion
+        </legend>
+
+        <label>
+          Estudiante
+          <input type="checkbox" name="opcion1" value="true">
+        </label><br>
+
+        <label>
+          Trabaja
+          <input type="checkbox" name="opcion2" value="true">
+        </label><br>
+
+        <label>
+          No trabaja
+          <input type="checkbox" name="opcion3" value="true"
+        </label><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>
+          Turno
+        </legend>
+
+        <label>
+          Seleccione el turno
+        </label><br>
+
+        <select name="turno">
+          <option value="M">Matutino</option>
+          <option value="V">Vespertino</option>
+          <option value="N">Nocturno</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>
+          Contraseña
+        </legend>
+
+        <label>
+          Contraseña
+        </label><br>
+        <input type="password" name="clave">
+
+      </fieldset>
+
+      <br>
+      <button type="submit">
+        Enviar
+      </button>
+
+      <br><br>
+      <button type="button" onclick="alert('Hola soy una alerta de JavaScript');">
+        Prueba
+      </button>
+    </form>
+    
+    <p>
+      file:///C:/Projects/Web/HTML/lesson8.html?nombre=Augusto&apellidos=Martinez&genero=M&opcion1=true&opcion3=true&turno=N
+    </p>
+  </body>
+</html>
+

@@ -1,0 +1,36 @@
+h1 {
+  color: red;
+  font-size: 60px;
+}
+
+h2 {
+  color: blue;
+  font-size: 45px;
+}
+
+p {
+  color: green;
+}
+
+.parrafo1 {
+  color: green;
+  background-color: yellow;
+  padding: 45px;
+}
+
+.parrafo2 {
+  color: pink;
+  background-color: black;
+  margin: 45px;
+  padding: 30px;
+}
+
+.parrafo3 {
+  color: orange;
+  background-color: blue;
+  margin: 15px;
+  padding: 30px;
+  border-width: 10px;
+  border-color: red;
+  border-style: solid;
+}
