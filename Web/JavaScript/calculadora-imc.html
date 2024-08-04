@@ -92,10 +92,24 @@
         margin-bottom: 15px;
         cursor: pointer;
       }
+
+      .mb-30 {
+        margin-bottom: 30px;
+      }
+
+      .result-box {
+        display: inline-block;
+        padding: 5px 15px;
+        height: 35px;
+        min-width: 35px;
+        box-sizing: border-box;
+        background-color: #fff;
+        text-align: center;
+      }
     </style>
 
     <script>
-
+      
     </script>
   </head>
   <body>
@@ -141,8 +155,29 @@
               </button>
             </div>
           </form>
+
+          <div class="mb-30">
+            <p>
+              Resultado: <span id="result" class="result-box"></span>
+            </p>
+            <p id="description">              
+            </p>
+          </div>
         </div>
       </div>
     </div>
+
+    <script>
+      function myAlert() {
+        alert('Hola');        
+      }
+
+      myAlert.hiUser = (name) => {
+        alert(name);
+      }
+
+      myAlert();
+      myAlert.hiUser('Hola Augusto');
+    </script>
   </body>
 </html>
