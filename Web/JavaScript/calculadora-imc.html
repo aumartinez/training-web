@@ -81,6 +81,8 @@
         border-radius: 10px;
         height: 35px;
         margin-bottom: 15px;
+        padding: 5px 15px;
+        box-sizing: border-box;
       }
 
       .form-btn {
@@ -97,6 +99,10 @@
         margin-bottom: 30px;
       }
 
+      .ml-15 {
+        margin-left: 15px;
+      }
+
       .result-box {
         display: inline-block;
         padding: 5px 15px;
@@ -105,11 +111,116 @@
         box-sizing: border-box;
         background-color: #fff;
         text-align: center;
+        vertical-align: middle;
       }
     </style>
 
     <script>
-      
+      document.addEventListener('DOMContentLoaded', () => {
+        let height = 0;
+        let weight = 0;
+        let btn = document.querySelector('#showResult');
+        let btnReset = document.querySelector('#resetResult');
+        let result = document.querySelector('#result');
+        let description = document.querySelector('#description');
+
+        let resultTable = [
+          {
+            "index": "Menor de 18.5",
+            "description": "Bajo de peso"
+          },
+          {
+            "index": "18.5 - 24.9",
+            "description": "Peso normal"
+          },
+          {
+            "index": "25 - 26.9",
+            "description": "Sobrepeso I"
+          },
+          {
+            "index": "27 - 29.9",
+            "description": "Sobrepeso II"
+          },
+          {
+            "index": "30 - 34.9",
+            "description": "Obesidad I"
+          },
+          {
+            "index": "35 - 39.9",
+            "description": "Obesidad II"
+          },
+          {
+            "index": "40 - 49.9",
+            "description": "Obesidad Morbida"
+          },
+          {
+            "index": "Mayor de 50",
+            "description": "Obesidad Extrema"
+          }
+        ];
+
+        btn.addEventListener('click', (event) => {
+          height = document.querySelector('#height').value;
+          weight = document.querySelector('#weight').value;
+
+          if (height <= 0 ) {
+            let imc = 0;
+            result.innerText = imc;
+            return;
+          }
+
+          let imc = weight / (height ** 2);          
+          imc = parseFloat(imc.toFixed(1));          
+
+          result.innerText = imc;
+
+          if (imc < 18.5) {
+            let text = resultTable[0];
+            description.innerText = text.description;
+          }
+
+          if (imc >=18.5 && imc < 24.9) {
+            let text = resultTable[1];
+            description.innerText = text.description;
+          }
+
+          if (imc >= 24.9 && imc < 26.9) {
+            let text = resultTable[2];
+            description.innerText = text.description;
+          }
+
+          if (imc >= 26.9 && imc < 29.9) {
+            let text = resultTable[3];
+            description.innerText = text.description;
+          }
+
+          if (imc >= 29.9 && imc < 34.9) {
+            let text = resultTable[4];
+            description.innerText = text.description;
+          }
+
+          if (imc >= 34.9 && imc < 39.9) {
+            let text = resultTable[5];
+            description.innerText = text.description;
+          }
+
+          if (imc >= 39.9 && imc < 49.9) {
+            let text = resultTable[6];
+            description.innerText = text.description;
+          }
+
+          if (imc >= 49.9) {
+            let text = resultTable[7];
+            description.innerText = text.description;
+          }
+        }, false);
+        
+        btnReset.addEventListener('click', (event) => {
+          result.innerText = '';
+          description.innerText = '';
+        }, false);
+
+      }, false);
     </script>
   </head>
   <body>
@@ -150,15 +261,18 @@
               <input class="form-input" id="weight" type="number">
             </div>
             <div class="form-group text-center">
-              <button type="button" class="form-btn btn-center">
+              <button type="button" id="showResult" class="form-btn btn-center">
                 Mostrar
+              </button>
+              <button type="reset" id="resetResult" class="form-btn btn-center ml-15">
+                Limpiar
               </button>
             </div>
           </form>
 
           <div class="mb-30">
             <p>
-              Resultado: <span id="result" class="result-box"></span>
+              Resultado (IMC): <span id="result" class="result-box"></span>
             </p>
             <p id="description">              
             </p>
@@ -166,18 +280,5 @@
         </div>
       </div>
     </div>
-
-    <script>
-      function myAlert() {
-        alert('Hola');        
-      }
-
-      myAlert.hiUser = (name) => {
-        alert(name);
-      }
-
-      myAlert();
-      myAlert.hiUser('Hola Augusto');
-    </script>
   </body>
 </html>
