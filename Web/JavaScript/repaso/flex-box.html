@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta chatset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Repaso de Flexbox</title>
+
+    <style>
+      /* Pantallas pequeñas */
+      .box {
+        max-width: 1100px;
+        padding: 0 15px;
+        box-sizing: border-box;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        row-gap: 30px;
+      }
+
+      .container {
+        max-width: 1100px;
+        padding: 0 15px;
+        box-sizing: border-box;
+        margin: auto;
+      }
+
+      .item {
+        width: 100%;        
+        flex: 0 0 auto;
+        padding: 0 15px;
+        box-sizing: border-box;
+        text-align: center;
+      }
+
+      .row {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        row-gap: 30px;
+      }
+      
+      .col-25 {
+        width: 100%;
+        flex: 0 0 auto;
+        padding: 0 15px;
+        box-sizing: border-box;
+      }
+
+      .col-20 {
+        width: 100%;
+        flex: 0 0 auto;
+        padding: 0 15px;
+        box-sizing: border-box;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      /* Pantallas desde tablet */
+      @media (min-width: 768px) {
+        .box {
+          flex-wrap: wrap;
+          flex-direction: row;
+        }
+
+        .item {
+          width: 33.33%;          
+        }
+
+        .row {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+
+        .col-25 {
+          width: 25%;
+        }
+
+        .col-20 {
+          width: 20%;
+        }
+      }
+
+      .img-responsive {        
+        max-width: 100%;
+        max-height: 300px;
+        height: auto;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item">
+        <img class="img-responsive" src="./img/code-geass-dakkan-no-roz.jpg" />
+      </div>
+      <div class="item">
+        <img class="img-responsive" src="./img/dead-dead-demons-dededede-destruction-ona.jpg" />
+      </div>
+      <div class="item">
+        <img class="img-responsive" src="./img/monogatari-series-off-monster-season.jpg" />
+      </div>
+      <div class="item">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+      <div class="item">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+      <div class="item">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-25 text-center">
+          <img class="img-responsive" src="./img/code-geass-dakkan-no-roz.jpg" />
+        </div>
+        <div class="col-25 text-center">
+          <img class="img-responsive" src="./img/dead-dead-demons-dededede-destruction-ona.jpg" />
+        </div>
+        <div class="col-25 text-center">
+          <img class="img-responsive" src="./img/monogatari-series-off-monster-season.jpg" />
+        </div>
+        <div class="col-25 text-center">
+          <img class="img-responsive" src="./img/dragon-ball-heroes.jpg" />
+        </div>
+
+        <div class="col-20 text-center">
+          <img class="img-responsive" src="./img/code-geass-dakkan-no-roz.jpg" />
+        </div>
+        <div class="col-20 text-center">
+          <img class="img-responsive" src="./img/monogatari-series-off-monster-season.jpg" />
+        </div>
+        <div class="col-20 text-center">
+          <img class="img-responsive" src="./img/dragon-ball-heroes.jpg" />
+        </div>
+        <div class="col-20 text-center">
+          <img class="img-responsive" src="./img/code-geass-dakkan-no-roz.jpg" />
+        </div>
+        <div class="col-20 text-center">
+          <img class="img-responsive" src="./img/monogatari-series-off-monster-season.jpg" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
