@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio de Arrays</title>
+
+    <style>
+      html {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+        padding: 0;
+        margin: 0;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      .row {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        row-gap: 30px;
+      }
+
+      .col-50,
+      .col-100 {
+        width: 100%;
+        padding: 0 15px;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      @media (min-width: 768px) {
+        .row {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+
+        .col-50 {
+          width: 50%;
+        }
+      }
+    </style>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        let colorList = document.getElementById('colorList');
+        let colorArray = ['Azul', 'Blanco', 'Amarillo'];
+
+        for (
+          let i = 0; 
+          i < colorArray.length; 
+          i++
+        ) {
+          let li = document.createElement('li');
+          li.innerText = colorArray[i];
+          colorList.appendChild(li);
+        }
+      }, false);
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        let iceCreamList = document.getElementById('iceCreamList');
+        let iceCreamArray = ['Vainilla', 'Chocolate', 'Napolitano'];
+
+        iceCreamArray.forEach(item => {
+          let li = document.createElement('li');
+          li.innerText = item;
+          iceCreamList.appendChild(li);
+        });
+      }, false);
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', ()=>{
+        let subjectList = document.getElementById('subjectList');
+        let subjectArray = ['Español', 'Matematicas', 'Historia'];
+
+        subjectArray.forEach(item => {
+          let li = document.createElement('li');
+          li.innerText = item;
+          subjectList.appendChild(li);
+        });
+      }, false);
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-100">
+          <h1 class="text-center">
+            Ejercicio con Arrays y JavaScript
+          </h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-50">
+          <h2 class="text-center">
+            Lista de Frutas
+          </h2>
+
+          <ul id="fruitList">
+
+          </ul>
+        </div>
+
+        <div class="col-50">
+          <h2 class="text-center">
+            Lista de Verduras
+          </h2>
+
+          <ul id="veggieList">
+
+          </ul>
+        </div>
+
+        <div class="col-50">
+          <h2 class="text-center">
+            Lista de Colores
+          </h2>
+
+          <ul id="colorList">
+
+          </ul>
+        </div>
+
+        <div class="col-50">
+          <h2 class="text-center">
+            Lista de Sabores de Eskimo
+          </h2>
+
+          <ul id="iceCreamList">
+
+          </ul>
+        </div>
+
+        <div class="col-50">
+          <h2 class="text-center">
+            Lista de Materias Escolares
+          </h2>
+
+          <ul id="subjectList">
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let fruitList = document.getElementById('fruitList');
+      let fruitArray = ['Mango', 'Manzana', 'Banano'];
+
+      for (let index = 0; index < fruitArray.length; index++) {
+        let li = document.createElement('li');
+        li.innerText = fruitArray[index];
+        fruitList.appendChild(li);
+      }
+    </script>
+
+    <script>
+      let veggieList = document.getElementById('veggieList');
+      let veggieArray = ['Ajo', 'Tomate', 'Cebolla'];
+
+      for (let i = 0; i < veggieArray.length; i++) {
+        let li = document.createElement('li');
+        li.innerText = veggieArray[i];
+        veggieList.appendChild(li);
+      }
+    </script>
+  </body>
+</html>
