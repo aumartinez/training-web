@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device=width, initial-scale=1">
+    <title>Ejemplo de arreglos de objetos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <style>
+      html * {
+        box-sizing: border-box;
+      }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+        line-height: 1.6;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: auto;
+      }
+
+      .container-large {
+        max-width: 100%;
+        margin: auto;
+      }
+
+      .row {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+        column-gap: 30px;
+      }
+
+      .col-33,
+      .col-100 {
+        width: 100%;
+        padding: 0 15px;
+      }
+
+      .navbar-header {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .text-uppercase {
+        text-transform: uppercase;
+      }
+
+      .bg-hero {
+        background-image: url('./img/hero-mobile.webp');
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: cover;
+      }
+
+      .hero .card {
+        min-height: 700px;
+        padding: 15px;
+        border-radius: 25px;
+      }
+
+      .hero .card h2,
+      .hero .card p {
+        color: #fff;
+      }
+
+      @media (min-width: 768px) {
+        .row {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+
+        .col-33 {
+          width: 33.333%;
+          padding: 0 15px;
+        }
+      }
+    </style>
+
+    <script>
+      const mainMenu = [
+        {
+          "id": 1,
+          "name": "Marcas",
+          "href": "https://www.coca-cola.com/mx/es/brands"
+        },
+        {
+          "id": 2,
+          "name": "Descubre",
+          "href": "#"
+        },
+        {
+          "id": 3,
+          "name": "Impacto",
+          "href": "#"
+        },
+        {
+          "id": 4,
+          "name": "Comprar",
+          "href": "#"
+        }
+      ];
+
+      document.addEventListener('DOMContentLoaded', () => {
+        let menu = document.getElementById('mainMenu');
+
+        mainMenu.forEach(item => {
+          let li = document.createElement('li');
+          let link = document.createElement('a');
+
+          link.setAttribute('href', item.href);
+          link.innerText = item.name;
+
+          li.appendChild(link);
+
+          menu.appendChild(li);
+        });
+      }, false);
+    </script>
+  </head>
+  <body>
+    <header class="bg-header">
+      <div class="container-large">
+        <div class="row">
+          <div class="col-100">
+            <nav class="navbar">
+              <div class="navbar-header">
+                <div class="navbar-logo">
+                  <a href="#">
+                    <img src="./img/Coke-company-logo-black.svg" />
+                  </a>
+                </div>
+                <div class="navbar-mobile">
+                  <button type="button" class="btn-mobile">
+                    <i class="fa-solid fa-bars"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="navbar-menu">
+                <ul id="mainMenu" class="menu text-center">
+
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="hero">
+        <div class="container">
+          <div class="row">
+            <div class="col-100">
+              <div class="card bg-hero">
+                <h2 class="text-center text-uppercase">
+                  Marvel fans ¡unidos!
+                </h2>
+                <p class="text-center">
+                  Escanea el código QR en las latas exclusivas de Coca-Cola y Marvel y entra a un mundo único.
+                </p>
+        
+                <p class="text-center">
+                  <a class="btn btn-link" href="https://www.coca-cola.com/mx/es/offerings/marvel">
+                    Entrar ahora
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
