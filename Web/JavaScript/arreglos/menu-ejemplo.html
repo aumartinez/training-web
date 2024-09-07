@@ -24,6 +24,10 @@
         font-optical-sizing: auto;
       }
 
+      body {
+        overflow-x: hidden;
+      }
+
       .container {
         max-width: 1100px;
         margin: auto;
@@ -38,8 +42,8 @@
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        width: 100%;
-        column-gap: 30px;
+        width: 100%;        
+        row-gap: 30px;
       }
 
       .col-33,
@@ -81,10 +85,114 @@
         color: #fff;
       }
 
+      header {
+        padding: 24px;
+      }
+
+      .btn-mobile {
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 24px;
+      }
+
+      .navbar-menu .menu {
+        list-style-type: none;
+      }
+
+      .navbar-menu .menu:not(.active) {
+        /* display: none; */
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s ease;
+      }
+
+      .navbar-menu .menu.active {
+        /* display: block; */
+        height: 230px;
+        overflow: hidden;
+        transition: height 0.5s ease;
+      }
+
+      .navbar-menu .menu li {
+        margin: 15px 0;
+      }
+
+      .navbar-menu .menu li a {
+        text-decoration: none;
+        font-size: 26px;
+        font-weight: 700;
+        color: #000;
+      }
+
+      .hero {
+        padding: 45px 0;
+      }
+
+      .hero .btn-link {
+        display: inline-block;
+        width: 100%;
+        background-color: #fff;
+        color: #000;
+        height: 35px;
+        line-height: 35px;
+        border-radius: 35px;
+        text-decoration: none;
+      }
+
+      .section {
+        padding: 45px 0;
+      }
+
+      .section .card {
+        min-height: 700px;        
+        border-radius: 25px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .section .card .card-header {
+        max-height: 400px;
+        overflow: hidden;
+      }
+
+      .section .card .card-header .card-img {
+        object-fit: cover;
+        max-width: 100%;
+        display: inline-block;
+      }
+
+      .section .card .card-footer,
+      .section .card .card-body {
+        padding: 15px;
+      }
+
+      .section .card .card-footer {
+        margin-bottom: 0;
+        margin-top: auto;
+      }
+
+      .bg-gray {
+        background-color: #eee;
+      }
+
+      .bg-white {
+        background-color: #fff;
+      }
+
+      .bg-black {
+        background-color: #000;
+      }
+
+      footer {
+        padding: 45px 0;
+      }
+
       @media (min-width: 768px) {
         .row {
           flex-direction: row;
-          flex-wrap: wrap;
+          flex-wrap: wrap;          
         }
 
         .col-33 {
@@ -129,10 +237,15 @@
           link.innerText = item.name;
 
           li.appendChild(link);
-
           menu.appendChild(li);
         });
       }, false);
+
+      function toggleMenu () {
+        let menu = document.getElementById('mainMenu');
+
+        menu.classList.toggle('active');
+      }
     </script>
   </head>
   <body>
@@ -148,14 +261,13 @@
                   </a>
                 </div>
                 <div class="navbar-mobile">
-                  <button type="button" class="btn-mobile">
+                  <button onclick="toggleMenu();" type="button" class="btn btn-mobile">
                     <i class="fa-solid fa-bars"></i>
                   </button>
                 </div>
               </div>
               <div class="navbar-menu">
-                <ul id="mainMenu" class="menu text-center">
-
+                <ul id="mainMenu" class="menu">
                 </ul>
               </div>
             </nav>
@@ -163,7 +275,7 @@
         </div>
       </div>
     </header>
-    <main>
+    <main class="bg-gray">
       <div class="hero">
         <div class="container">
           <div class="row">
@@ -186,6 +298,94 @@
           </div>
         </div>
       </div>
+
+      <div class="section">
+        <div class="container">
+          <div class="row">
+            <div class="col-33">
+              <div class="card bg-white">
+                <div class="card-header">
+                  <img src="./img/fanta.webp" class="card-img"/>
+                </div>
+                <div class="card-body">
+                  <h2>
+                    ¡Es hora del show!
+                  </h2>
+
+                  <p>
+                    Participa para ganar entradas para la película de Beetlejuice 2.
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <p>
+                    Participa ahora
+                    <span><i class="fa-solid fa-arrow-right"></i></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-33">
+              <div class="card bg-white">
+                <div class="card-header">
+                  <img src="./img/coca-estudio.webp" class="card-img"/>
+                </div>
+                <div class="card-body">
+                  <h2>
+                    Coke Studio
+                  </h2>
+
+                  <p>
+                    Experimenta la magia de la música.
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <p>
+                    Descúbrelo
+                    <span><i class="fa-solid fa-arrow-right"></i></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-33">
+              <div class="card bg-white">
+                <div class="card-header">
+                  <img src="./img/helado.webp" class="card-img"/>
+                </div>
+                <div class="card-body">
+                  <h2>
+                    ¿Alguien dijo helados gratis?
+                  </h2>
+
+                  <p>
+                    Para seguir celebrando nuestro Centenario queremos recompensar tu devoción regalándote una probadita de nuestros sabores Pastel de Cumpleaños y Delicia Centenaria.*
+                  </p>
+
+                  <p>
+                    <em>*En tiendas Santa Clara participantes.</em>
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <p>
+                    Regístrate
+                    <span><i class="fa-solid fa-arrow-right"></i></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
+    <footer class="bg-black">
+      <div class="container">
+        <div class="row">
+          <div class="col-100">
+            <img src="./img/logo-white-large.svg" class="footer-logo"/>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
