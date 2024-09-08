@@ -29,7 +29,7 @@
       }
 
       .container {
-        max-width: 1100px;
+        max-width: 1200px;
         margin: auto;
       }
 
@@ -89,7 +89,7 @@
         padding: 24px;
       }
 
-      .btn-mobile {
+      header .btn-mobile {
         border: 0;
         background-color: transparent;
         cursor: pointer;
@@ -98,6 +98,8 @@
 
       .navbar-menu .menu {
         list-style-type: none;
+        padding: 0 40px;
+        margin: 0;
       }
 
       .navbar-menu .menu:not(.active) {
@@ -150,6 +152,7 @@
         overflow: hidden;
         display: flex;
         flex-direction: column;
+        height: 100%;
       }
 
       .section .card .card-header {
@@ -189,6 +192,10 @@
         padding: 45px 0;
       }
 
+      header .btn-desktop {
+        display: none;
+      }
+
       @media (min-width: 768px) {
         .row {
           flex-direction: row;
@@ -198,6 +205,72 @@
         .col-33 {
           width: 33.333%;
           padding: 0 15px;
+        }
+
+        .text-lg-left {
+          text-align: left;
+        }
+
+        .bg-hero {
+          background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(0,0,0,1)), url('./img/hero-desktop.webp');
+        }
+
+        .hero .card {
+          min-height: 500px;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+        }
+
+        .hero .card .card-body {
+          width: 50%;
+        }
+
+        .hero .btn-link {
+          width: auto;
+          padding: 0 40px;
+        }
+
+        header .btn-mobile {
+          display: none;
+        }
+
+        header .btn-desktop {
+          display: inline-block;
+          background-color: transparent;
+          border: none;
+          font-size: 24px;
+          cursor: pointer;
+          margin-right: 0;
+          margin-left: auto;
+        }
+
+        header .navbar-menu {
+          margin-left: 30px;
+        }
+
+        header .navbar-menu .menu:not(.active) {
+          display: flex;
+          height: auto;
+          padding: 0;
+        }
+
+        header .navbar-menu .menu:not(.active) li {
+          margin: 0 30px;
+        }
+
+        header .navbar-menu .menu:not(.active) li a {
+          font-size: 16px;          
+        }
+
+        header .navbar {
+          display: flex;
+          align-items: center;
+        }
+
+        header .navbar .navbar-header {
+          justify-content: flex-start;
+          width: auto;
         }
       }
     </style>
@@ -264,12 +337,15 @@
                   <button onclick="toggleMenu();" type="button" class="btn btn-mobile">
                     <i class="fa-solid fa-bars"></i>
                   </button>
-                </div>
+                </div>                
               </div>
               <div class="navbar-menu">
                 <ul id="mainMenu" class="menu">
                 </ul>
               </div>
+              <button type="button" class="btn btn-desktop">
+                <i class="fa-regular fa-user"></i>
+              </button>
             </nav>
           </div>
         </div>
@@ -281,18 +357,20 @@
           <div class="row">
             <div class="col-100">
               <div class="card bg-hero">
-                <h2 class="text-center text-uppercase">
-                  Marvel fans ¡unidos!
-                </h2>
-                <p class="text-center">
-                  Escanea el código QR en las latas exclusivas de Coca-Cola y Marvel y entra a un mundo único.
-                </p>
-        
-                <p class="text-center">
-                  <a class="btn btn-link" href="https://www.coca-cola.com/mx/es/offerings/marvel">
-                    Entrar ahora
-                  </a>
-                </p>
+                <div class="card-body">
+                  <h2 class="text-center text-uppercase text-lg-left">
+                    Marvel fans ¡unidos!
+                  </h2>
+                  <p class="text-center text-lg-left">
+                    Escanea el código QR en las latas exclusivas de Coca-Cola y Marvel y entra a un mundo único.
+                  </p>
+          
+                  <p class="text-center text-lg-left">
+                    <a class="btn btn-link" href="https://www.coca-cola.com/mx/es/offerings/marvel">
+                      Entrar ahora
+                    </a>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
