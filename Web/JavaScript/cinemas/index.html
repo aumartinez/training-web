@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device=width, initial-scale=1">
+    <title>Cinemas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+
+      html * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Titillium Web", sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .row {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        flex-wrap: nowrap;
+        width: 100%;
+      }
+
+      .col-100 {
+        width: 100%;
+        padding: 0 15px;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .bg-header {
+        background-color: #1F294D;
+      }
+
+      .navbar-header {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        align-items: center;
+      }
+
+      .navbar-logo {
+        margin-left: auto;
+      }
+
+      .logo-mobile {
+        width: 157px;
+        vertical-align: middle;
+      }
+
+      .logo-desktop {
+        display: none;
+      }
+
+      .btn-mobile {
+        background-color: transparent;
+        cursor: pointer;
+        color: #fff;
+        font-size: 36px;
+        border: none;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      #mainMenu {
+        margin-top: 0;
+        margin-bottom: 0;
+        list-style: none;        
+        padding: 0;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s ease;
+      }
+
+      #mainMenu .link-item {
+        margin: 5px 0;
+      }
+
+      #mainMenu .link-item a {
+        text-decoration: none;
+        color: #fff;
+        padding: 5px 30px;
+        display: inline-block;
+        width: 100%;
+        transition: background-color 0.5s ease;
+        border-radius: 35px;
+      }
+
+      #mainMenu .link-item a:hover {        
+        background-color: #007DFF;
+        transition: background-color 0.5s ease;
+      }
+
+      @media (min-width: 768px) {
+        .bg-header {
+          background-color: #fff;
+        }
+
+        .logo-mobile {
+          display: none;
+        }
+      }
+    </style>
+
+    <script>
+      let menuLinks = [
+        {
+          "id": 1,
+          "name": "Inicio",
+          "href": "https://cinemas.com.ni/"
+        },
+        {
+          "id": 2,
+          "name": "Cartelera",
+          "href": "https://cinemas.com.ni/cartelera/"
+        },
+        {
+          "id": 3,
+          "name": "Club Cinemas",
+          "href": "https://cinemas.com.ni/club-cinemas/"
+        },
+        {
+          "id": 4,
+          "name": "Promociones",
+          "href": "https://cinemas.com.ni/promociones/"
+        },
+        {
+          "id": 5,
+          "name": "Productos",
+          "href": "https://cinemas.com.ni/productos/"
+        },
+        {
+          "id": 6,
+          "name": "Contacto",
+          "href": "https://cinemas.com.ni/contacto/"
+        }
+      ];
+
+      document.addEventListener('DOMContentLoaded', () => {
+        let menu = document.getElementById('mainMenu');
+
+        menuLinks.forEach(item => {
+          let li = document.createElement('li');
+          let a = document.createElement('a');
+
+          li.classList.add('link-item');
+
+          a.innerText = item.name;
+          a.href = item.href;
+
+          li.appendChild(a);
+          menu.appendChild(li);
+        })
+      }, false);
+
+      function toggleMenu () {
+        let menu = document.getElementById('mainMenu');        
+        menu.classList.toggle('active');
+
+        if (menu.classList.contains('active')) {
+          let h = menu.scrollHeight;
+          menu.style.height = h + 'px';
+        } else {
+          menu.style.height = '';
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="bg-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-100">
+            <nav class="navbar">
+              <div class="navbar-header">
+                <div class="navbar-logo">
+                  <a href="https://cinemas.com.ni/">
+                    <img src="./img/logo_web-mobil.png" class="logo-mobile">
+                  </a>
+                  <img src="./img/logo-cinemas.png" class="logo-desktop">
+                </div>
+                <button onclick="toggleMenu();" type="button" class="btn btn-mobile">
+                  <i class="fa-solid fa-bars"></i>
+                </button>
+              </div>
+              <div class="navbar-menu">
+                <ul id="mainMenu">
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      
+    </main>
+    <footer>
+
+    </footer>
+  </body>
+</html>
