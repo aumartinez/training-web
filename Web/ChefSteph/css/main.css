@@ -1,0 +1,150 @@
+:root {
+  --primary-color: #19597C;
+  --text-bg-primary: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1464px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+.col-100 {
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.navbar-toggle {
+  width: 35px;
+  height: 35px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.navbar-toggle img {
+  color: red;
+}
+
+.bg-primary a,
+.bg-primary {
+  background-color: var(--primary-color);
+  color: var(--text-bg-primary);
+}
+
+.navbar-menu {
+  margin: 0 -1rem;
+}
+
+.navbar-menu .navbar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  overflow: hidden;
+  height: 0;
+  transition: height 0.5s ease;  
+}
+
+.navbar-menu .navbar-item {
+  padding: 0.7rem 0;
+}
+
+.navbar-menu .navbar-link {
+  text-decoration: none;
+}
+
+.navbar-menu .navbar-link.btn-white {
+  background-color: #fff;
+  color: var(--primary-color);
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+  .row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+    padding-top: 12px;
+    padding-bottom: 8px;
+    align-items: center;
+    height: 90px;
+  }
+
+  .navbar .navbar-header {
+    padding-right: 60px;
+  }
+
+  .navbar-menu {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .navbar-menu::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: var(--primary-color);
+  }
+
+  .navbar-menu .navbar-links {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    padding-right: 1rem;
+    align-items: center;
+  }
+
+  .navbar-menu .navbar-item {
+    padding: 0 1rem;
+    margin: 0 0.5rem;
+  }
+}
