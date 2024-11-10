@@ -1,5 +1,6 @@
 :root {
   --primary-color: #19597C;
+  --secondary-color: #E63A50;
   --text-bg-primary: #fff;
 }
 
@@ -37,6 +38,11 @@ body {
   padding: 0 1rem;
 }
 
+.col-flex {
+  flex: 1;
+  padding: 0 1rem;
+}
+
 .navbar-header {
   display: flex;
   justify-content: space-between;
@@ -61,6 +67,29 @@ body {
 .bg-primary {
   background-color: var(--primary-color);
   color: var(--text-bg-primary);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+a.btn,
+.btn {
+  text-decoration: none;
 }
 
 .navbar-menu {
@@ -92,6 +121,22 @@ body {
   border-radius: 5px;
 }
 
+/*** Hero ***/
+.hero {
+  padding: 45px 0;
+}
+
+.hero .hero-title {
+  font-family: 'KorolevCompressedW04', sans-serif;
+  font-size: 45px;
+  line-height: 1;
+}
+
+.img-responsive {
+  max-width: 100%;
+  display: inline-block;
+}
+
 @media (min-width: 768px) {
   .row {
     flex-direction: row;
@@ -105,7 +150,7 @@ body {
 
   .navbar {
     display: flex;
-    padding-top: 12px;
+    padding-top: 0;
     padding-bottom: 8px;
     align-items: center;
     height: 90px;
@@ -146,5 +191,10 @@ body {
   .navbar-menu .navbar-item {
     padding: 0 1rem;
     margin: 0 0.5rem;
+  }
+
+  /*** Hero ***/
+  .hero {
+    padding: 97px 0;
   }
 }

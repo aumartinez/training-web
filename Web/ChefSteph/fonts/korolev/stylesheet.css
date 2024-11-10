@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'KorolevCompressedW04';
+    src: url('KorolevCompressedW04-Bold.eot');
+    src: url('KorolevCompressedW04-Bold.eot?#iefix') format('embedded-opentype'),
+        url('KorolevCompressedW04-Bold.woff2') format('woff2'),
+        url('KorolevCompressedW04-Bold.woff') format('woff'),
+        url('KorolevCompressedW04-Bold.ttf') format('truetype'),
+        url('KorolevCompressedW04-Bold.svg#KorolevCompressedW04-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
